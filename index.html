@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white flex justify-center items-center h-screen">
+    <div class="bg-white text-black p-6 rounded-lg shadow-lg w-96">
+        <div class="mb-4 flex">
+            <input type="text" id="todo-input" placeholder="Add..." class="flex-1 p-2 border border-gray-300 rounded">
+            <button id="add-btn" class="ml-2 bg-green-500 text-white px-4 py-2 rounded">Add</button>
+        </div>
+        <div class="mb-4 flex justify-between">
+            <button data-filter="all" class="flex-1 bg-gray-100 text-black px-4 py-2 mx-1 rounded">All (<span id="all-count">0</span>)</button>
+            <button data-filter="completed" class="flex-1 bg-gray-100 text-black px-4 py-2 mx-1 rounded">Completed (<span id="completed-count">0</span>)</button>
+            <button data-filter="uncompleted" class="flex-1 bg-gray-100 text-black px-4 py-2 mx-1 rounded">Uncompleted (<span id="uncompleted-count">0</span>)</button>
+        </div>
+        <div id="todo-list"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
